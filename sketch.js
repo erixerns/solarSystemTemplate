@@ -3,6 +3,7 @@ var planets=[];
 var c;
 
 function setup(){
+  frameRate(120);
   createCanvas(600, 600);
   c = createInput();
   c.attribute("placeholder", "Eccentricity");
@@ -10,7 +11,7 @@ function setup(){
   c.position(150, 20);
 
   ch = createElement("h2", "Eccentricity");
-  ch.position(20, 1)
+  ch.position(20, 1);
 }
 
 function draw(){
@@ -20,7 +21,7 @@ function draw(){
     planet.render();
   });
   if(planets.length>0)
-    if(frameCount-planets[0].i>=1200)
+    if(frameCount-planets[0].i>=900)
       planets.shift();
 }
 
