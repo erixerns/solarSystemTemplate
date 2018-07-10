@@ -50,10 +50,13 @@ var Planet = function(x, y){
     this.points.push([this.x, this.y]);
     fill(this.rgb[0], this.rgb[1], this.rgb[2], 60000/(frameCount-this.i));
     // noStroke();
-    stroke(this.rgb[0], this.rgb[1], this.rgb[2],60000/(frameCount-this.i));
+    
     //beginShape();
     for(let i=0; i<this.points.length; i++){
+      
+      stroke(this.rgb[0], this.rgb[1], this.rgb[2],i/this.points.length*255);
       point(this.points[i][0], this.points[i][1]);
+      
     }
     // endShape();
     ellipse(this.x, this.y, this.w, this.w);
